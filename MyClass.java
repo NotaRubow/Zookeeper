@@ -1,6 +1,9 @@
+import java.io.File;
 import java.util.Random;
 import java.time.format.DateTimeFormatter;  
-import java.time.LocalDateTime;   
+import java.time.LocalDateTime;
+import java.util.Scanner;
+
 public class MyClass {
   public static void main(String args[]) {
     String animalType = "Camel";
@@ -15,7 +18,7 @@ public class MyClass {
     System.out.println("Animal type: " + animalType);
     System.out.println("Current time: " + dtf.format(now));
     System.out.printf("Habitat temperature: %.2fF" ,showTemp);
-
+      System.out.println();
     File file = new File("hippo.txt");
         try{
             Scanner fr = new Scanner(file);
