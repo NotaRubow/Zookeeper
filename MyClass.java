@@ -15,5 +15,16 @@ public class MyClass {
     System.out.println("Animal type: " + animalType);
     System.out.println("Current time: " + dtf.format(now));
     System.out.printf("Habitat temperature: %.2fF" ,showTemp);
+
+    File file = new File("hippo.txt");
+        try{
+            Scanner fr = new Scanner(file);
+            while(fr.hasNextLine()){
+                String i = fr.nextLine();
+                System.out.println(i);
+            }
+        } catch (Exception e){
+            System.out.println("No file");
+        }
   }
 }
