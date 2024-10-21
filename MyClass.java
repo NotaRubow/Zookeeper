@@ -19,7 +19,45 @@ public class MyClass {
     System.out.println("Current time: " + dtf.format(now));
     System.out.printf("Habitat temperature: %.2fF" ,showTemp);
       System.out.println();
-    File file = new File("hippo.txt");
+
+    Scanner habby = new Scanner(System.in);
+    System.out.println("Please enter the number of the habitat you would like to view: \n1. Hippo\n2. Camel\n3. Elephant\n4. Monkey");
+    int hab = habby.nextInt();
+    if (hab == 1)
+        File file = new File("hippo.txt");
+        try{
+            Scanner fr = new Scanner(file);
+            while(fr.hasNextLine()){
+                String i = fr.nextLine();
+                System.out.println(i);
+            }
+        } catch (Exception e){
+            System.out.println("No file");
+        }
+    else if (hab == 2)
+        File file = new File("camel.txt");
+        try{
+            Scanner fr = new Scanner(file);
+            while(fr.hasNextLine()){
+                String i = fr.nextLine();
+                System.out.println(i);
+            }
+        } catch (Exception e){
+            System.out.println("No file");
+        }
+    if (hab == 3)
+        File file = new File("elephant.txt");
+        try{
+            Scanner fr = new Scanner(file);
+            while(fr.hasNextLine()){
+                String i = fr.nextLine();
+                System.out.println(i);
+            }
+        } catch (Exception e){
+            System.out.println("No file");
+        }
+    else if (hab == 4)
+        File file = new File("monkey.txt");
         try{
             Scanner fr = new Scanner(file);
             while(fr.hasNextLine()){
